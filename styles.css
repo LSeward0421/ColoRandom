@@ -12,10 +12,35 @@ h1 {
 
 aside {
     height: 100%;
-    width: 25%;
+    width: 24%;
     position: fixed;
     z-index: 1;
     top: 0;
     right: 0;
     background-color: antiquewhite;
+}
+
+.boxes {
+    height: 200px;
+    width: 200px;
+    border-radius: 2px;
+    border: solid;
+    display: flex;
+    margin: 10px 20px 0px 20px;
+    
+}
+
+.palette {
+    display: flex;
+}
+
+.palette-labels {
+    display: flex;
+    margin: 10px 20px 20px 20px;
+}
+
+.labels {
+    width:200px;
+    margin: 10px 25px 20px 20px;
+    text-align: center;
 }
