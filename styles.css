@@ -3,8 +3,19 @@ body {
     align-items: center;
     flex-direction: column;
     height: 100%;
+    width: 75%;
 }
 
 h1 {
-    font-size: 50pt;
+    font-size: 75pt;
+}
+
+aside {
+    height: 100%;
+    width: 25%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: antiquewhite;
 }
