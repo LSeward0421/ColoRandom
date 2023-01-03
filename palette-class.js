@@ -1,8 +1,14 @@
 class Palette {
+    constructor() {
+        this.id = Date.now();
+        this.colors = [];
+    };
+    generateColors() {
+        for (var i = 0; i < 5; i++) {
+            this.colors.push(new Color());
+        };
+    };
+};
 
-}
 
-// Need a class for palette
-// Need a unique ID property
-// Need 5 instances of the color class
 // Be able to lock colors
