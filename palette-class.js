@@ -8,7 +8,19 @@ class Palette {
             this.colors.push(new Color());
         };
     };
+    generateNewColor() {
+        for (var i = 0; i < this.colors.length; i++) {
+            if (!this.colors[i].locked) {
+            }
+        }
+    }
 };
 
 
-// Be able to lock colors
+
+// what id we changed the hex code with interpolation 
+
+// Palatte should have: 5 colors, unique ID, able to replace colors w/ new colors, able to lock colors, only replace unlocked colors
+
+// if all new colors are unlocked then run generate colors 
+// if something is locked, then we need those colors to change

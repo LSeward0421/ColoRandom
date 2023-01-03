@@ -1,8 +1,12 @@
 // functions below 👇
 
-var newPalette = new Palette();
+var currentPalette = new Palette();
 
-newPalette.generateColors();
+
+currentPalette.generateColors();
+console.log(currentPalette)
+currentPalette.generateNewColor();
+console.log(currentPalette)
 
 
 function getRandomElement(array) {
