@@ -1,8 +1,6 @@
 class Color {
-
+    constructor() {
+        this.hex = `#${newHexCode()}`
+        this.locked = false
+    }
 }
-
-// Need a class of color
-// build a random hexcode
-// needs a boolean for property of locked
-// should begin unlocked
