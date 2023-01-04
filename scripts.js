@@ -1,6 +1,15 @@
 // Global Variables 👇
 var currentPalette;
-
+var box1 = document.querySelector('.box1')
+var box2 = document.querySelector('.box2')
+var box3 = document.querySelector('.box3')
+var box4 = document.querySelector('.box4')
+var box4 = document.querySelector('.box5')
+var paletteHtml = document.querySelector('.palette')
+//Event Listeners
+window.addEventListener('load', function() { 
+  createNewPalette(); 
+})
 
 // Functions Below 👇
 //Refactor: when the user first visits the page, 
@@ -12,6 +21,9 @@ function createNewPalette() {
   currentPalette = new Palette();
   return currentPalette;
 };
+function displayNewPalette() {
+
+}
 
 function newHexCode() {
   var hexCode = '';
