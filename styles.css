@@ -27,6 +27,7 @@ aside {
     border: solid;
     display: flex;
     margin: 10px 20px 0px 20px;
+    background-color: whitesmoke;
     
 }
 
@@ -59,7 +60,7 @@ aside {
     background-color: white;
  }
 
-.box1 {
+/* .box1 {
     background-color: #f50404;
 }
 
@@ -77,4 +78,4 @@ aside {
 
 .box5 {
     background-color: #0602f8;
-}
+} */

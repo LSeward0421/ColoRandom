@@ -1,14 +1,17 @@
 // Global Variables 👇
 var currentPalette;
-var box1 = document.querySelector('.box1')
-var box2 = document.querySelector('.box2')
-var box3 = document.querySelector('.box3')
-var box4 = document.querySelector('.box4')
-var box4 = document.querySelector('.box5')
-var paletteHtml = document.querySelector('.palette')
+// var box1 = document.querySelector('.box1')
+// var box2 = document.querySelector('.box2')
+// var box3 = document.querySelector('.box3')
+// var box4 = document.querySelector('.box4')
+// var box4 = document.querySelector('.box5')
+var paletteHtml = document.querySelector('.palette');
+var boxes = document.querySelectorAll('.boxes');
+var hexCodes = document.querySelectorAll('.labels');
 //Event Listeners
 window.addEventListener('load', function() { 
   createNewPalette(); 
+  displayNewPalette();
 })
 
 // Functions Below 👇
@@ -22,7 +25,9 @@ function createNewPalette() {
   return currentPalette;
 };
 function displayNewPalette() {
-
+for (var i = 0; i < currentPalette.colors.length; i++) {
+  boxes[i].style.backgroundColor = currentPalette.colors[i].hex
+}
 }
 
 function newHexCode() {
