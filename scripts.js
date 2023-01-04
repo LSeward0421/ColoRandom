@@ -3,7 +3,11 @@ var currentPalette;
 
 
 // Functions Below 👇
-
+//Refactor: when the user first visits the page, 
+//they see a randomly generated color palette.
+// pull the hex code data into css from the palette class
+// tell css to use the hexcodes as box colors using the background color property
+// update the DOM to change the palette on pageload using a function
 function createNewPalette() {
   currentPalette = new Palette();
   return currentPalette;
