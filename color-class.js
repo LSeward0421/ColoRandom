@@ -1,6 +1,6 @@
 class Color {
     constructor() {
-        this.hex = `#${newHexCode()}`
-        this.locked = false
-    }
-}
+        this.hex = `#${newHexCode()}`;
+        this.locked = false;
+    };
+};
