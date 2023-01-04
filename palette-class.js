@@ -1,26 +1,33 @@
 class Palette {
     constructor() {
         this.id = Date.now();
-        this.colors = [];
+        this.colors = [new Color(), new Color(), new Color(), new Color(), new Color()];
     };
+
     generateColors() {
         for (var i = 0; i < 5; i++) {
             this.colors.push(new Color());
         };
     };
-    generateNewColor() {
+
+    lockColor(colorObj) {
+        this.colors[colorObj].locked = true;
+    }
+
+    replaceColor() {
+        this.colors[3].locked = true;
+        console.log(this.colors[3])
         for (var i = 0; i < this.colors.length; i++) {
             if (!this.colors[i].locked) {
-            }
+                this.colors[i] = new Color();
+                // this.colors.splice(i, 1, new Color()); 
+            };
         }
-    }
+    };
 };
 
-
-
-// what id we changed the hex code with interpolation 
 
 // Palatte should have: 5 colors, unique ID, able to replace colors w/ new colors, able to lock colors, only replace unlocked colors
 
 // if all new colors are unlocked then run generate colors 
-// if something is locked, then we need those colors to change
+// if something is locked, then we need the unlocked colors to change
