@@ -75,3 +75,15 @@ aside {
     font-size: 20pt;
     background-color: white;
  }
+
+.mini-pals {
+    width: 90%;
+    height: 100px;
+}
+
+ .mini-boxes {
+    width: 30px;
+    height: 30px;
+    border: solid;
+    background-color: whitesmoke;
+ }

@@ -5,6 +5,7 @@ var savedPalettes = [];
 var paletteHtml = document.querySelector('.palette');
 var boxes = document.querySelectorAll('.boxes');
 var hexCodes = document.querySelectorAll('.labels');
+var savedSection = document.querySelector('.saved-palette-section')
 var newPaletteBtn = document.getElementById('new-p-btn');
 var savePaletteBtn = document.getElementById('save-p-btn');
 
@@ -44,8 +45,24 @@ function savePalette() {
   savedPalettes.unshift(currentPalette);
   createNewPalette();
 };
-// create a function move the current palette object to saved palette array
-// use createNewPalette to refresh instance on page
+
+// need to loop through the savedPalettes array to access each of the properties
+// use inner HTML interpolation to render mini palette for each index of the savedPalettes array
+
+
+function displaySavedPalette() {
+  for (var i = 0; i < savedPalettes.length; i++) {
+    savedSection.innerHTML = ''
+    savedSection.innerHTML += `
+    <section class="mini-pals">
+      <div class="mini-boxes"></div>
+      <div class="mini-boxes"></div>
+      <div class="mini-boxes"></div>
+      <div class="mini-boxes"></div>
+      <div class="mini-boxes"></div>
+    </section>`
+  };
+};
 
 function newHexCode() {
   var hexCode = '';
