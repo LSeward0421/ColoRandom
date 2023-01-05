@@ -1,12 +1,27 @@
 // Global Variables 👇
 var currentPalette;
+var paletteHtml = document.querySelector('.palette');
+var boxes = document.querySelectorAll('.boxes');
+var hexCodes = document.querySelectorAll('.labels');
 
+//Event Listeners
+window.addEventListener('load', function() { 
+  createNewPalette(); 
+  displayNewPalette();
+})
 
 // Functions Below 👇
-
+ 
 function createNewPalette() {
   currentPalette = new Palette();
   return currentPalette;
+};
+
+function displayNewPalette() {
+  for (var i = 0; i < currentPalette.colors.length; i++) {
+    boxes[i].style.backgroundColor = currentPalette.colors[i].hex;
+    hexCodes[i].innerText = currentPalette.colors[i].hex;
+  };
 };
 
 function newHexCode() {
