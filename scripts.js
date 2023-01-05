@@ -60,7 +60,8 @@ function displaySavedPalette() {
       <div class="mini-boxes" style="background-color:${savedPalettes[i].colors[2].hex}"></div>
       <div class="mini-boxes" style="background-color:${savedPalettes[i].colors[3].hex}"></div>
       <div class="mini-boxes" style="background-color:${savedPalettes[i].colors[4].hex}"></div>
-    </section>`
+    </section>
+    <br><br>`
   };
 };
 

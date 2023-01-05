@@ -90,3 +90,7 @@ aside {
     border: solid;
     background-color: whitesmoke;
  }
+
+ .saved-palette-section {
+    display: grid;
+ }
