@@ -18,6 +18,8 @@ newPaletteBtn.addEventListener('click', function() {
   displayNewPalette();
 });
 
+//<img> elements, css to resize it
+
 // Functions Below 👇
  
 function createNewPalette() {
