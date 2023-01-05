@@ -1,3 +1,7 @@
+.hidden {
+    display: none;
+}
+
 body {
     height: 100%;
     width: 75%;
@@ -42,8 +46,19 @@ aside {
 
 .labels {
     width:200px;
-    margin: 10px 25px 20px 20px;
+    margin: 10px 50px 20px 20px;
     text-align: center;
+}
+
+.lock {
+    width: 25px;
+    height: 25px;
+}
+
+.unlock {
+    width: 40px;
+    height: 40px;
+    margin-right: 80px;
 }
 
 .buttons {
@@ -59,23 +74,3 @@ aside {
     font-size: 20pt;
     background-color: white;
  }
-
-/* .box1 {
-    background-color: #f50404;
-}
-
-.box2 {
-    background-color: #fab700;
-}
-
-.box3 {
-    background-color: #f9f002;
-}
-
-.box4 {
-    background-color: #24680A;
-}
-
-.box5 {
-    background-color: #0602f8;
-} */
