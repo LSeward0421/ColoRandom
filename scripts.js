@@ -22,7 +22,8 @@ newPaletteBtn.addEventListener('click', function() {
 
 savePaletteBtn.addEventListener('click', function() {
   savePalette();
-  displaySavedPalette();
+  displayNewPalette();
+  // displaySavedPalette();
 });
 
 // Functions Below 👇
@@ -38,6 +39,13 @@ function displayNewPalette() {
     hexCodes[i].innerText = currentPalette.colors[i].hex;
   };
 };
+
+function savePalette() {
+  savedPalettes.unshift(currentPalette);
+  createNewPalette();
+};
+// create a function move the current palette object to saved palette array
+// use createNewPalette to refresh instance on page
 
 function newHexCode() {
   var hexCode = '';
