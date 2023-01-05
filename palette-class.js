@@ -22,5 +22,6 @@ class Palette {
                 this.colors[i] = new Color();
             };
         };
+        return this.colors
     };
 };
