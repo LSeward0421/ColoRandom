@@ -55,11 +55,11 @@ function displaySavedPalette() {
     savedSection.innerHTML = ''
     savedSection.innerHTML += `
     <section class="mini-pals">
-      <div class="mini-boxes"></div>
-      <div class="mini-boxes"></div>
-      <div class="mini-boxes"></div>
-      <div class="mini-boxes"></div>
-      <div class="mini-boxes"></div>
+      <div class="mini-boxes" style="background-color:${savedPalettes[i].colors[0].hex}"></div>
+      <div class="mini-boxes" style="background-color:${savedPalettes[i].colors[1].hex}"></div>
+      <div class="mini-boxes" style="background-color:${savedPalettes[i].colors[2].hex}"></div>
+      <div class="mini-boxes" style="background-color:${savedPalettes[i].colors[3].hex}"></div>
+      <div class="mini-boxes" style="background-color:${savedPalettes[i].colors[4].hex}"></div>
     </section>`
   };
 };
