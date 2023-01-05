@@ -1,10 +1,12 @@
 // Global Variables 👇
 
 var currentPalette;
+var savedPalettes = [];
 var paletteHtml = document.querySelector('.palette');
 var boxes = document.querySelectorAll('.boxes');
 var hexCodes = document.querySelectorAll('.labels');
 var newPaletteBtn = document.getElementById('new-p-btn');
+var savePaletteBtn = document.getElementById('save-p-btn');
 
 // Event Listeners 👇
 
@@ -18,7 +20,10 @@ newPaletteBtn.addEventListener('click', function() {
   displayNewPalette();
 });
 
-//<img> elements, css to resize it
+savePaletteBtn.addEventListener('click', function() {
+  savePalette();
+  displaySavedPalette();
+});
 
 // Functions Below 👇
  
