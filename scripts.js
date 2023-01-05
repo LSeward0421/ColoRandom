@@ -1,14 +1,22 @@
 // Global Variables 👇
+
 var currentPalette;
 var paletteHtml = document.querySelector('.palette');
 var boxes = document.querySelectorAll('.boxes');
 var hexCodes = document.querySelectorAll('.labels');
+var newPaletteBtn = document.getElementById('new-p-btn');
 
-//Event Listeners
+// Event Listeners 👇
+
 window.addEventListener('load', function() { 
   createNewPalette(); 
   displayNewPalette();
-})
+});
+
+newPaletteBtn.addEventListener('click', function() {
+  currentPalette.replaceColor();
+  displayNewPalette();
+});
 
 // Functions Below 👇
  
