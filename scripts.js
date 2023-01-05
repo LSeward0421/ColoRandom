@@ -24,7 +24,7 @@ newPaletteBtn.addEventListener('click', function() {
 savePaletteBtn.addEventListener('click', function() {
   savePalette();
   displayNewPalette();
-  // displaySavedPalette();
+  displaySavedPalette();
 });
 
 // Functions Below 👇
