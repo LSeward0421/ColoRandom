@@ -51,8 +51,8 @@ function savePalette() {
 
 
 function displaySavedPalette() {
+  savedSection.innerHTML = '';
   for (var i = 0; i < savedPalettes.length; i++) {
-    savedSection.innerHTML = ''
     savedSection.innerHTML += `
     <section class="mini-pals">
       <div class="mini-boxes" style="background-color:${savedPalettes[i].colors[0].hex}"></div>
@@ -61,7 +61,7 @@ function displaySavedPalette() {
       <div class="mini-boxes" style="background-color:${savedPalettes[i].colors[3].hex}"></div>
       <div class="mini-boxes" style="background-color:${savedPalettes[i].colors[4].hex}"></div>
     </section>
-    <br><br>`
+    <br>`;
   };
 };
 
