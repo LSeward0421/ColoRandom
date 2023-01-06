@@ -8,6 +8,8 @@ var hexCodes = document.querySelectorAll('.labels');
 var savedSection = document.querySelector('.saved-palette-section')
 var newPaletteBtn = document.getElementById('new-p-btn');
 var savePaletteBtn = document.getElementById('save-p-btn');
+var trashCan = document.querySelector('.trashcan')
+
 
 // Event Listeners 👇
 
@@ -28,6 +30,9 @@ savePaletteBtn.addEventListener('click', function() {
   displaySavedPalette();
 });
 
+trashCan.addEventListener('onclick', deleteSavedPalette)
+
+
 // Functions Below 👇
  
 function createNewPalette() {
@@ -47,6 +52,14 @@ function savePalette() {
   createNewPalette();
 };
 
+function deleteSavedPalette(id) {
+  for (var i = 0; i < savedPalettes.length; i++) {
+     var savedPaletteID = savedPalettes[i].id.toString()
+    if (id === savedPaletteID) {
+      savedPalettes.splice(i, 1);
+    };
+  };
+};
 
 function displaySavedPalette() {
   savedSection.innerHTML = '';
@@ -58,8 +71,9 @@ function displaySavedPalette() {
       <div class="mini-boxes" style="background-color:${savedPalettes[i].colors[2].hex}"></div>
       <div class="mini-boxes" style="background-color:${savedPalettes[i].colors[3].hex}"></div>
       <div class="mini-boxes" style="background-color:${savedPalettes[i].colors[4].hex}"></div>
+      <img class="trashcan" id="${savedPalettes[i].id}" src="trash_icon.png" onclick="deleteSavedPalette(this.id)" alt="trash can icon">
     </section>
-    <br>`;
+    `;
   };
 };
 

@@ -91,6 +91,10 @@ aside {
     background-color: black;
  }
 
+ .trashcan {
+    width:25px;
+ }
+
  aside {
 	overflow-y: auto;
 	scrollbar-color: #ffffff;
