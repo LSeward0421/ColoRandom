@@ -12,7 +12,8 @@ var savePaletteBtn = document.getElementById('save-p-btn');
 // Event Listeners 👇
 
 window.addEventListener('load', function() { 
-  createNewPalette(); 
+  currentPalette = createNewPalette(); 
+  console.log(currentPalette);
   displayNewPalette();
 });
 
@@ -23,6 +24,7 @@ newPaletteBtn.addEventListener('click', function() {
 
 savePaletteBtn.addEventListener('click', function() {
   savePalette();
+  currentPalette = createNewPalette();
   displayNewPalette();
   displaySavedPalette();
 });
@@ -43,11 +45,8 @@ function displayNewPalette() {
 
 function savePalette() {
   savedPalettes.unshift(currentPalette);
-  createNewPalette();
+  // createNewPalette();
 };
-
-// need to loop through the savedPalettes array to access each of the properties
-// use inner HTML interpolation to render mini palette for each index of the savedPalettes array
 
 
 function displaySavedPalette() {

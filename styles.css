@@ -31,8 +31,7 @@ aside {
     border: solid;
     display: flex;
     margin: 10px 20px 0px 20px;
-    background-color: whitesmoke;
-    
+    background-color: black;
 }
 
 .palette {
@@ -82,15 +81,17 @@ aside {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+
 }
 
  .mini-boxes {
     width: 30px;
     height: 30px;
     border: solid;
-    background-color: whitesmoke;
+    background-color: black;
  }
 
- .saved-palette-section {
-    /* display: grid; */
+ aside {
+	overflow-y: auto;
+	scrollbar-color: #ffffff;
  }
