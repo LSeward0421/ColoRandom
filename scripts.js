@@ -30,7 +30,7 @@ savePaletteBtn.addEventListener('click', function() {
   displaySavedPalette();
 });
 
-// trashCan.addEventListener('onclick', deleteSavedPalette)
+trashCan.addEventListener('onclick', deleteSavedPalette)
 
 
 // Functions Below 👇
@@ -55,7 +55,6 @@ function savePalette() {
 function deleteSavedPalette(id) {
   for (var i = 0; i < savedPalettes.length; i++) {
      var savedPaletteID = savedPalettes[i].id.toString()
-     console.log(savedPaletteID, id)
     if (id === savedPaletteID) {
       savedPalettes.splice(i, 1);
     };
