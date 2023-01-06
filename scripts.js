@@ -28,6 +28,7 @@ savePaletteBtn.addEventListener('click', function() {
   displaySavedPalette();
 });
 
+
 // Functions Below 👇
  
 function createNewPalette() {
@@ -47,6 +48,11 @@ function savePalette() {
   createNewPalette();
 };
 
+function deleteSavedPalette() {
+  // if the saved Palette id === trash can Id
+  // splice the saved palette from the array
+}
+
 
 function displaySavedPalette() {
   savedSection.innerHTML = '';
@@ -58,8 +64,9 @@ function displaySavedPalette() {
       <div class="mini-boxes" style="background-color:${savedPalettes[i].colors[2].hex}"></div>
       <div class="mini-boxes" style="background-color:${savedPalettes[i].colors[3].hex}"></div>
       <div class="mini-boxes" style="background-color:${savedPalettes[i].colors[4].hex}"></div>
+      <img class="trashcan" id="${savedPalettes[i].id}" src="trash_icon.png" onclick="deleteSavedPalette()" alt="trash can icon">
     </section>
-    <br>`;
+    `;
   };
 };
 
