@@ -12,8 +12,7 @@ var savePaletteBtn = document.getElementById('save-p-btn');
 // Event Listeners 👇
 
 window.addEventListener('load', function() { 
-  currentPalette = createNewPalette(); 
-  console.log(currentPalette);
+  createNewPalette(); 
   displayNewPalette();
 });
 
@@ -24,7 +23,7 @@ newPaletteBtn.addEventListener('click', function() {
 
 savePaletteBtn.addEventListener('click', function() {
   savePalette();
-  currentPalette = createNewPalette();
+  createNewPalette();
   displayNewPalette();
   displaySavedPalette();
 });
@@ -38,14 +37,14 @@ function createNewPalette() {
 
 function displayNewPalette() {
   for (var i = 0; i < currentPalette.colors.length; i++) {
-    boxes[i].style.backgroundColor = currentPalette.colors[i].hex;
     hexCodes[i].innerText = currentPalette.colors[i].hex;
+    boxes[i].style.backgroundColor = currentPalette.colors[i].hex;
   };
 };
 
 function savePalette() {
   savedPalettes.unshift(currentPalette);
-  // createNewPalette();
+  createNewPalette();
 };
 
 
@@ -66,7 +65,7 @@ function displaySavedPalette() {
 
 function newHexCode() {
   var hexCode = '';
-  var hexData = [0, 1, 2 , 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F', 'G'];
+  var hexData = [0, 1, 2 , 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F'];
   var randomHexArray = [];
 
   for (var i = 0; i < 6; i++) {
