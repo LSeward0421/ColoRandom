@@ -14,9 +14,9 @@ class Palette {
 
     lockColor(i) {
         if (!this.colors[i].locked) {
-            this.colors[i].locked = true
+            this.colors[i].locked = true;
         } else {
-            this.colors[i].locked = false
+            this.colors[i].locked = false;
         };
     };
 
@@ -26,6 +26,6 @@ class Palette {
                 this.colors[i] = new Color();
             };
         };
-        return this.colors
+        return this.colors;
     };
 };
