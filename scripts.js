@@ -76,7 +76,7 @@ function displaySavedPalette() {
       <div class="mini-boxes" style="background-color:${savedPalettes[i].colors[2].hex}"></div>
       <div class="mini-boxes" style="background-color:${savedPalettes[i].colors[3].hex}"></div>
       <div class="mini-boxes" style="background-color:${savedPalettes[i].colors[4].hex}"></div>
-      <img class="trashcan" id="${savedPalettes[i].id}" src="trash_icon.png" onclick="deleteSavedPalette(this.id)" alt="trash can icon">
+      <img class="trashcan" id="${savedPalettes[i].id}" src="src/trash_icon.png" onclick="deleteSavedPalette(this.id)" alt="trash can icon">
     </section>
     `;
   };
