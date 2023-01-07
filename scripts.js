@@ -29,9 +29,6 @@ savePaletteBtn.addEventListener('click', function() {
   displaySavedPalette();
 });
 
-// trashCan.addEventListener('onclick', deleteSavedPalette)
-
-
 // Functions Below 👇
  
 function createNewPalette() {
