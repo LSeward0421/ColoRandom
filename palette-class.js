@@ -13,7 +13,11 @@ class Palette {
     };
 
     lockColor(i) {
-        this.colors[i].locked = true;
+        if (!this.colors[i].locked) {
+            this.colors[i].locked = true
+        } else {
+            this.colors[i].locked = false
+        };
     };
 
     replaceColor() {
