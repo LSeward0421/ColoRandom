@@ -10,7 +10,6 @@ var newPaletteBtn = document.getElementById('new-p-btn');
 var savePaletteBtn = document.getElementById('save-p-btn');
 var trashCan = document.querySelector('.trashcan')
 
-
 // Event Listeners 👇
 
 window.addEventListener('load', function() { 
@@ -30,7 +29,7 @@ savePaletteBtn.addEventListener('click', function() {
   displaySavedPalette();
 });
 
-trashCan.addEventListener('onclick', deleteSavedPalette)
+// trashCan.addEventListener('onclick', deleteSavedPalette)
 
 
 // Functions Below 👇
@@ -59,6 +58,7 @@ function deleteSavedPalette(id) {
       savedPalettes.splice(i, 1);
     };
   };
+  displaySavedPalette()
 };
 
 function displaySavedPalette() {
