@@ -2,12 +2,14 @@
 
 var currentPalette;
 var savedPalettes = [];
-var paletteHtml = document.querySelector('.palette');
+var mainPalette = document.querySelector('main');
 var boxes = document.querySelectorAll('.boxes');
 var hexCodes = document.querySelectorAll('.labels');
 var savedSection = document.querySelector('.saved-palette-section')
 var newPaletteBtn = document.getElementById('new-p-btn');
 var savePaletteBtn = document.getElementById('save-p-btn');
+var lockedIcons = document.querySelectorAll('.lock')
+var unlockedIcons = document.querySelectorAll('.unlock')
 
 
 // Event Listeners 👇
@@ -27,10 +29,12 @@ savePaletteBtn.addEventListener('click', function() {
   createNewPalette();
   displayNewPalette();
   displaySavedPalette();
+  toggleLock();
 });
 
-paletteHtml.addEventListener('click', function(event) {
-  lockColor(event)
+mainPalette.addEventListener('click', function(event) {
+  lockColor(event);
+  toggleLock()
 });
 
 // Functions Below 👇
@@ -59,7 +63,7 @@ function deleteSavedPalette(id) {
       savedPalettes.splice(i, 1);
     };
   };
-  displaySavedPalette()
+  displaySavedPalette();
 };
 
 function displaySavedPalette() {
@@ -83,6 +87,18 @@ function lockColor(event) {
     if (event.target.id === `box${i}`) {
       currentPalette.lockColor(i);
     };
+  };
+};
+
+function toggleLock() {
+  for(var i = 0; i < lockedIcons.length; i++) {
+    if(currentPalette.colors[i].locked === true) {
+      lockedIcons[i].classList.remove('hidden');
+      unlockedIcons[i].classList.add('hidden');
+  } if(currentPalette.colors[i].locked === false) {
+      lockedIcons[i].classList.add('hidden');
+      unlockedIcons[i].classList.remove('hidden');
+    };   
   };
 };
 
