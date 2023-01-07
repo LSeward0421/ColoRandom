@@ -31,36 +31,48 @@ aside {
     width: 200px;
     border-radius: 2px;
     border: solid;
-    display: flex;
+    /* display: flex; */
     margin: 10px 20px 0px 20px;
     background-color: black;
+
 }
 
 .palette {
     display: flex;
+    justify-content: space-around;
 }
 
 .palette-labels {
     display: flex;
     margin: 10px 20px 20px 20px;
+    justify-content: space-around;
 }
 
 .labels {
-    width:200px;
-    margin: 10px 50px 20px 20px;
-    text-align: center;
+    /* width: 200px; */
+    /* margin: 10px 50px 20px 20px; */
+    /* text-align: center; */
+}
+
+.label-section {
+    display: flex;
+    width: 200px;
+    align-items: center;
+    margin-left: 80px;
+    /* padding-left: 25px; */
 }
 
 .lock {
     width: 25px;
     height: 25px;
-    margin-right: 40px;
+    /* margin-right: 40px; */
+    padding-left: 10px;
 }
 
 .unlock {
     width: 40px;
     height: 40px;
-    margin-right: 80px;
+    /* margin-right: 80px; */
 }
 
 .buttons {
