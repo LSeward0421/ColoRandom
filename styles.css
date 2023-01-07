@@ -31,10 +31,9 @@ aside {
     width: 200px;
     border-radius: 2px;
     border: solid;
-    /* display: flex; */
     margin: 10px 20px 0px 20px;
     background-color: black;
-
+    cursor: pointer;
 }
 
 .palette {
@@ -48,31 +47,22 @@ aside {
     justify-content: space-around;
 }
 
-.labels {
-    /* width: 200px; */
-    /* margin: 10px 50px 20px 20px; */
-    /* text-align: center; */
-}
-
 .label-section {
     display: flex;
     width: 200px;
     align-items: center;
     margin-left: 80px;
-    /* padding-left: 25px; */
 }
 
 .lock {
     width: 25px;
     height: 25px;
-    /* margin-right: 40px; */
     padding-left: 10px;
 }
 
 .unlock {
     width: 40px;
     height: 40px;
-    /* margin-right: 80px; */
 }
 
 .buttons {
@@ -80,14 +70,21 @@ aside {
     justify-content: space-evenly;
 }
 
- button {
+button {
     width: 220px;
     height: 100px;
     border-radius: 12px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 20pt;
     background-color: white;
+    cursor: pointer;
  }
+
+button:hover {
+    background-color: #020202;
+   color:#ffffff;
+}
+
 
 .mini-pals {
     width: 90%;
