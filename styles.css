@@ -35,6 +35,15 @@ aside {
     margin: 10px 20px 0px 20px;
     background-color: black;
 }
+div {
+    width: 100px;
+    height: 100px;
+    transition: width 1s;
+  }
+
+  div:hover {
+    width: 250px;
+  }
 
 .palette {
     display: flex;
