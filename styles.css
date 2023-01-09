@@ -8,9 +8,22 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-h1 {
+.colorandom {
     font-size: 75pt;
     text-align: center;
+    animation-name: colorchange;
+    animation-duration: 3s;
+}
+
+@keyframes colorchange {
+ 0% { color: orange; }
+ 15% { color:pink; }
+ 30% { color: rgb(213, 213, 83); }
+ 45% { color: cyan; }
+ 60% { color: rgb(230, 21, 21); }
+ 75% {color: rgb(0, 81, 255) }
+ 90% { color: rgb(48, 2, 91); }
+ 100% { color: black; }
 }
 
 aside {
