@@ -1,0 +1,3 @@
+# ColoRandom
+## Abstract
+-  ColoRandom is an app that allows users to generate random color palettes with their correlating hex codes. Users have the ability to lock and unlock colors to assist with creating a fully customized palette of their choosing. It gives users the ability to save palettes that they have created for future reference. Go ahead and give it a [try](https://lseward0421.github.io/ColoRandom/)!
