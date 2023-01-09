@@ -16,3 +16,21 @@
 - [Lauren Seward](https://www.linkedin.com/in/lauren-seward-0421/)
 
 - [Winston Calhoun](https://www.linkedin.com/in/winston-calhoun-9841bb256/)
+
+## Context
+- We are all students in our 4th week of mod 1 in the Turing School of Software and Design front-end program. We had 7 days to complete this project and spent about 20-25 hours of work time.
+
+## Learning Goals
+- Write semantic HTML and efficient CSS to form a usable UI.
+- Write clean, DRY JavaScript and leverage classes, creating and using an effective data model.
+- Manipulate the page after it has loaded adding, removing, and updating elements on the DOM.
+- Refine your collaboration skills.
+
+## Wins and Challenges
+#### Wins:
+- Getting more familiarized with the git workflow
+- Gained proficiency with testing functionality
+- Taking the time to set up and understand class to class interactions, allowing us to streamline future iterations.
+#### Challenges:
+- Figuring out how to approach trouble-shooting, how and when to test functionality.
+- Trying to write functionality that wasn't redundant.
