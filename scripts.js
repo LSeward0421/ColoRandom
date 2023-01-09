@@ -4,15 +4,14 @@ var currentPalette;
 var savedPalettes = [];
 var mainPalette = document.querySelector('main');
 var boxes = document.querySelectorAll('.boxes');
-var hexCodes = document.querySelectorAll('.labels');
-var savedSection = document.querySelector('.saved-palette-section')
-var newPaletteBtn = document.getElementById('new-p-btn');
-var savePaletteBtn = document.getElementById('save-p-btn');
-var lockedIcons = document.querySelectorAll('.lock')
-var unlockedIcons = document.querySelectorAll('.unlock')
+var hexCodes = document.querySelectorAll('.hexes');
+var lockedIcons = document.querySelectorAll('.lock');
+var unlockedIcons = document.querySelectorAll('.unlock');
+var newPaletteBtn = document.getElementById('newPaletteBTN');
+var savePaletteBtn = document.getElementById('savePaletteBTN');
+var savedSection = document.querySelector('.saved-palette-section');
 
-
-// Event Listeners 👇
+// Event Listeners 👇 
 
 window.addEventListener('load', function() { 
   createNewPalette(); 
@@ -29,12 +28,12 @@ savePaletteBtn.addEventListener('click', function() {
   createNewPalette();
   displayNewPalette();
   displaySavedPalette();
-  toggleLock();
+  toggleLockImage();
 });
 
 mainPalette.addEventListener('click', function(event) {
-  lockColor(event);
-  toggleLock()
+  toggleLockData(event);
+  toggleLockImage();
 });
 
 // Functions Below 👇
@@ -58,7 +57,7 @@ function savePalette() {
 
 function deleteSavedPalette(id) {
   for (var i = 0; i < savedPalettes.length; i++) {
-     var savedPaletteID = savedPalettes[i].id.toString()
+     var savedPaletteID = savedPalettes[i].id.toString();
     if (id === savedPaletteID) {
       savedPalettes.splice(i, 1);
     };
@@ -82,7 +81,7 @@ function displaySavedPalette() {
   };
 };
 
-function lockColor(event) {
+function toggleLockData(event) {
   for (var i = 0; i < currentPalette.colors.length; i++) {
     if (event.target.id === `box${i}`) {
       currentPalette.lockColor(i);
@@ -90,12 +89,12 @@ function lockColor(event) {
   };
 };
 
-function toggleLock() {
-  for(var i = 0; i < lockedIcons.length; i++) {
-    if(currentPalette.colors[i].locked === true) {
+function toggleLockImage() {
+  for (var i = 0; i < lockedIcons.length; i++) {
+    if (currentPalette.colors[i].locked === true) {
       lockedIcons[i].classList.remove('hidden');
       unlockedIcons[i].classList.add('hidden');
-  } if(currentPalette.colors[i].locked === false) {
+    } else if (currentPalette.colors[i].locked === false) {
       lockedIcons[i].classList.add('hidden');
       unlockedIcons[i].classList.remove('hidden');
     };   
