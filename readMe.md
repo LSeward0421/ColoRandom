@@ -8,6 +8,9 @@
 - cd into the project. 
 - Type: open index.html
 
+## Preview
+ ![ColoRandom Preview](https://media.giphy.com/media/KjCdFUNRw0fki7TUzC/giphy.gif)
+
 ## Contributors
 - [Chrissy Cooper](https://www.linkedin.com/in/christine-cooper-691196144/)
 
