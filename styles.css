@@ -11,11 +11,12 @@ body {
 .colorandom {
     font-size: 75pt;
     text-align: center;
-    -webkit-animation: colorchange 4s;
+    animation-name: colorchange;
+    animation-duration: 3s;
 }
 
-@-webkit-keyframes colorchange {
- 0% { color: orange; ;}
+@keyframes colorchange {
+ 0% { color: orange; }
  15% { color:pink; }
  30% { color: rgb(213, 213, 83); }
  45% { color: cyan; }
