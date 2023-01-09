@@ -42,7 +42,7 @@ aside {
 .boxes {
     height: 200px;
     width: 200px;
-    border-radius: 2px;
+    border-radius: 10px;
     border: solid;
     margin: 10px 20px 0px 20px;
     background-color: black;
@@ -54,13 +54,13 @@ aside {
     justify-content: space-around;
 }
 
-.palette-labels {
+.palette-info {
     display: flex;
     margin: 10px 20px 20px 20px;
     justify-content: space-around;
 }
 
-.label-section {
+.info-section {
     display: flex;
     width: 200px;
     align-items: center;
@@ -112,6 +112,7 @@ button:hover {
     width: 30px;
     height: 30px;
     border: solid;
+    border-radius: 5px;
     background-color: black;
  }
 
